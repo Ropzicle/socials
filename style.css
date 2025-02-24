@@ -42,7 +42,7 @@ body, html {
     overflow: hidden;
     border-right: 3px solid #fff;
     padding-right: 5px;
-    animation: typing 3.5s steps(10) 1s forwards, blink 0.75s step-end infinite;
+    animation: typing 3.5s steps(10) forwards, blink 0.75s step-end infinite;
 }
 
 .hero-content p {
@@ -51,7 +51,7 @@ body, html {
     margin-bottom: 30px;
     color: #ddd;
     opacity: 0;
-    animation: fadeInText 2s 1s forwards;
+    animation: fadeInText 2s 0.5s forwards;
 }
 
 /* Social Icons */
@@ -61,20 +61,22 @@ body, html {
     gap: 30px;
     margin-top: 30px;
     opacity: 0;
-    animation: fadeInText 2s 1.5s forwards;
+    animation: fadeInText 2s 1s forwards;
 }
 
 .social-icon {
     text-decoration: none;
     font-size: 3em;
     color: #fff;
-    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+    outline: none; /* Remove outline on focus */
 }
 
+/* Smooth Hover Effect */
 .social-icon:hover {
-    transform: translateY(-10px);
+    transform: scale(1.2); /* Slightly enlarge */
     color: #fff;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Neon glow */
 }
 
 /* Footer */
@@ -87,7 +89,7 @@ body, html {
     position: absolute;
     bottom: 0;
     opacity: 0;
-    animation: fadeInText 2s 2s forwards;
+    animation: fadeInText 2s 1.5s forwards;
 }
 
 /* Animations */
